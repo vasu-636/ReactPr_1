@@ -1,123 +1,222 @@
-/* Custom Navbar Styling for ProLab */
-/* Apply this to your main CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-/* 1. Global Navbar Container Styling */
-.prolab-navbar {
-    background: linear-gradient(to right, #576ae4, #ad479c) !important; /* Gradient background */
-    min-height: 100px; /* Adjust height as needed */
-    box-shadow: none; /* Remove any default box shadow */
-    align-items: center; /* Vertically center content in the navbar */
+*{
+    font-family: "Poppins", sans-serif;
 }
 
-/* Ensure the background-body-tertiary class doesn't override the gradient */
-.prolab-navbar.bg-body-tertiary {
-    background-color: transparent !important;
+.navigation {
+  background: linear-gradient(90deg, #3a5eff 0%, #c23eff 100%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Center the logo vertically if it doesn't align well */
-.prolab-navbar .navbar-brand {
-    display: flex; /* Make it a flex container */
-    align-items: center; /* Vertically center the image within the brand link */
-    padding-top: 0;
-    padding-bottom: 0;
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
-.prolab-navbar .navbar-brand img {
-    max-height: 50px; /* Adjust logo size */
-    width: auto;
+.nav-link:hover,
+.nav-link.active {
+  color: #ffd700 !important;
 }
 
-/* 2. Navigation Links Styling */
-.prolab-navbar .navbar-nav .nav-item {
-    padding-left: 10px; /* Adjust horizontal spacing between links */
-    padding-right: 10px;
-    position: relative; /* Needed for the active link underline */
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* Hero Section  */
+
+.hero-area {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9ff 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.prolab-navbar .navbar-nav .nav-link {
-    color: white !important; /* White text for links */
-    font-weight: 700 !important; /* Bold text as in image */
-    font-size: 1.1em !important; /* Slightly larger font size */
-    padding-top: 5px !important; /* Adjust vertical padding */
-    padding-bottom: 5px !important; /* Adjust vertical padding */
-    transition: color 0.3s ease; /* Smooth transition for hover/active */
+.hero-title {
+  font-size: 60px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.3;
+  margin-bottom: 20px;
 }
 
-.prolab-navbar .navbar-nav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.8) !important; /* Slightly dim on hover */
+.hero-subtitle {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 30px;
+  max-width: 90%;
 }
 
-/* Active link underline (the white line under "Home") */
-.prolab-navbar .navbar-nav .nav-item .nav-link.active::after {
-    content: '';
-    position: absolute;
-    left: 50%; /* Center the line */
-    transform: translateX(-50%); /* Adjust for centering */
-    bottom: -5px; /* Position below the link, adjust as needed */
-    width: 60%; /* Width of the underline */
-    height: 3px;
-    background-color: white;
-    border-radius: 2px; /* Slightly rounded ends */
+.hero-btn {
+  background: linear-gradient(90deg, #3a5eff 0%, #c23eff 100%);
+  border: none;
+  padding: 12px 28px;
+  font-weight: 600;
+  color: white;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-/* White color for the dropdown toggle arrow */
-.prolab-navbar .navbar-nav .dropdown-toggle::after {
-    color: white !important;
+.hero-btn:hover {
+  opacity: 0.85;
 }
 
-/* Dropdown menu items */
-.prolab-navbar .dropdown-menu {
-    background-color: rgba(56, 85, 199, 0.9); /* Slightly transparent background for dropdown */
-    border: none;
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
 }
 
-.prolab-navbar .dropdown-menu .dropdown-item {
-    color: white;
-    font-weight: normal;
+/* smooth floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-.prolab-navbar .dropdown-menu .dropdown-item:hover,
-.prolab-navbar .dropdown-menu .dropdown-item:focus {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+/* About US */
+
+.about-section {
+  padding: 100px 0;
+  background-color: #ffffff;
 }
 
-.prolab-navbar .dropdown-menu .dropdown-divider {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+/* Section title */
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
 }
 
-/* 3. Navbar Toggler (Hamburger Icon) Styling */
-.prolab-navbar .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5); /* White border for toggler */
+.section-subtitle {
+  color: #555;
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.prolab-navbar .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+/* Feature box styling */
+.about-box {
+  padding: 40px 20px;
+  border-radius: 10px;
+  background: #f7f9ff;
+  transition: all 0.3s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-icon-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.about-box:hover .about-icon i {
+  color: #c23eff;
+}
+
+/* Title + text */
+.about-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.about-text {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-section {
+    padding: 70px 0;
+  }
+  .about-title {
+    font-size: 20px;
+  }
+  .about-text {
+    font-size: 14px;
+  }
+}
+
+/* We are best section  */
+
+.wearebest-section {
+  padding: 100px 0;
+  background: #f7f9ff;
+}
+
+.section-title {
+  font-size: 45px;
+  font-weight: 800;
+  color: #222;
 }
 
 
+/* Drone image */
+.best-drone-img {
+  max-width: 100%;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
+}
 
+/* Floating effect */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
 
-/* Adjustments for larger screens (default Bootstrap lg breakpoint and up) */
-@media (min-width: 992px) {
-    .prolab-navbar .container-fluid {
-        /* Ensure logo is left, and menu is right */
-        justify-content: space-between; 
-        align-items: center; /* Vertical alignment */
-    }
+/* Feature boxes */
+.best-box {
+  background: #f7f9ff;
+  padding: 15px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
 
-    /* Override Bootstrap's collapse default for lg screens if needed */
-    .prolab-navbar .navbar-collapse {
-        flex-grow: 1; /* Allow it to take available space */
-        justify-content: flex-end; /* Push menu to the right */
-    }
+.best-icon-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
 
-    /* Ensure .ms-auto works for the ul */
-    .prolab-navbar .navbar-nav {
-        margin-left: auto !important; /* Pushes the nav links to the right */
-        margin-right: 0 !important; /* Override any mb-lg-0 if present */
-        flex-direction: row; /* Ensure horizontal display */
-        align-items: center; /* Vertically center nav items */
-    }
+.best-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.best-text {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .wearebest-section {
+    padding: 70px 0;
+  }
+  .section-title {
+    font-size: 28px;
+  }
 }
