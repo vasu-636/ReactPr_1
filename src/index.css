@@ -454,43 +454,41 @@ h6 {
   transform: translateY(-5px);
 }
 /* Why Choose Us  */
-
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 8px;
+.video-box .overlay {
+  transition: background-color 0.3s ease;
 }
-    
-.div1 {
-    grid-column: span 4 / span 4;
-    grid-row: span 6 / span 6;
+.video-box:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
 }
-
-.div2 {
-    grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-    grid-column-start: 5;
+.video-play-btn i {
+  transition: transform 0.2s ease;
 }
+.video-box:hover .video-play-btn i {
+  transform: scale(1.2);
+}
+/* Compare component  */
 
-.div3 {
-    grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-    grid-column-start: 7;
+.compare-table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.div4 {
-    grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-    grid-column-start: 5;
-    grid-row-start: 4;
+.compare-table th,
+.compare-table td {
+  vertical-align: middle;
 }
 
-.div5 {
-    grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-    grid-column-start: 7;
-    grid-row-start: 4;
+.mybtn1 {
+  display: inline-block;
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 5px;
+  text-decoration: none;
 }
-        
+
+.mybtn1:hover {
+  background-color: #084298;
+  color: #fff;
+}
