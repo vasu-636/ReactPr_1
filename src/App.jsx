@@ -5,6 +5,8 @@ import AboutUs from './assets/Components/AboutUS'
 import WeAreBest from './assets/Components/WeAreBest'
 import WeAreBestLeft from './assets/Components/WeAreBestLeft'
 import AttractiveFeatures from './assets/Components/AttractiveFeature'
+import Deal from './assets/Components/Deal'
+import AwesomeProducts from './assets/Components/AwesomeProducts'
 
 
 const App = () => {
@@ -16,6 +18,8 @@ const App = () => {
     <WeAreBest />
     <WeAreBestLeft />
     <AttractiveFeatures />
+    <Deal />
+    <AwesomeProducts />
    </section>
   )
 }
