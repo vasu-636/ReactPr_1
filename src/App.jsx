@@ -7,6 +7,7 @@ import WeAreBestLeft from './assets/Components/WeAreBestLeft'
 import AttractiveFeatures from './assets/Components/AttractiveFeature'
 import Deal from './assets/Components/Deal'
 import AwesomeProducts from './assets/Components/AwesomeProducts'
+import WhyChooseUs from './assets/Components/WhyChooseUs'
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
     <AttractiveFeatures />
     <Deal />
     <AwesomeProducts />
+    <WhyChooseUs />
    </section>
   )
 }

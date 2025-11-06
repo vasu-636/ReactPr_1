@@ -13,7 +13,7 @@ const AwesomeProducts = () => {
     <section id="features" className="py-5 text-center bg-white">
         <div className="container py-5 my-5">
         <div className="mb-5">
-          <h2 className="fw-bold">Attractive Features</h2>
+          <h2 className="fw-bold">Our Awesome Products</h2>
           <p className="text-muted">
             Discover the cutting-edge technologies that make Prolab drones stand out.
           </p>
